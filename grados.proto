@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Temperatura {
+  rpc CelsiusAFahrenheit (TemperaturaRequest) returns (TemperaturaResponse);
+  rpc FahrenheitACelsius (TemperaturaRequest) returns (TemperaturaResponse);
+}
+
+message TemperaturaRequest {
+  double valor = 1;
+}
+
+message TemperaturaResponse {
+  double resultado = 1;
+}
